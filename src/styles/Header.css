@@ -1,0 +1,36 @@
+/* Header styles */
+.header {
+  flex: 0 0 80px; /* Fixed width for the left-side header */
+  height: 100%; /* Full height */
+  background-color: var(--color-background);
+  border-right: 0.5px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align to the top */
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.header nav {
+  width: 100%; /* Full width of the header */
+}
+
+.header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.header nav .nav-list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.header nav .nav-list-item .icon {
+  fill: var(--color-icon);
+  transition: fill 0.2s ease;
+}

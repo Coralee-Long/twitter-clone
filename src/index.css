@@ -1,0 +1,125 @@
+:root {
+  /* General Font Settings */
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Light Mode Colors */
+  --color-text: #0f1419;
+  --color-secondary-text: rgba(0, 0, 0, 0.6);
+  --color-background: #ffffff;
+  --color-link: #1d9bf0;
+  --color-link-hover: #1a8cd8;
+  --color-button-bg: #1d9bf0; /* Updated to Twitter blue */
+  --color-button-text: #ffffff; /* Button text color */
+  --color-button-hover: #1a8cd8;
+  --color-icon-primary: #0f1419;
+  --color-icon-secondary: rgb(29, 155, 240);
+  --border-light: rgba(0, 0, 0, 0.6);
+
+  /* Dark Mode Colors */
+  --dark-color-text: rgba(255, 255, 255, 0.87);
+  --dark-color-secondary-text: rgba(255, 255, 255, 0.6);
+  --dark-color-background: #000000;
+  --dark-color-link: #1d9bf0;
+  --dark-color-link-hover: #1a8cd8;
+  --dark-color-button-bg: #1d9bf0; /* Keep button blue for dark mode */
+  --dark-color-button-text: #ffffff; /* Button text remains white */
+  --dark-color-button-hover: #1a8cd8;
+  --dark-color-icon: rgba(255, 255, 255, 0.87);
+  --dark-color-icon-secondary: rgb(29, 155, 240);
+  --dark-border-light: rgba(255, 255, 255, 0.3);
+}
+
+/* Global reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+#root {
+  display: flex; /* Flex container for header and main */
+  flex: 1 1 auto;
+  height: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-link);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 20px; /* Rounded button */
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  cursor: pointer;
+  transition:
+    background-color 0.25s,
+    border-color 0.25s;
+}
+
+button:hover {
+  background-color: var(--color-button-hover);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+button:disabled {
+  background-color: var(--color-button-bg);
+  color: var(--color-secondary-text);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.icon {
+  fill: var(--color-icon);
+  transition: fill 0.2s ease;
+  color: var(--color-icon);
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: var(--dark-color-text);
+    --color-secondary-text: var(--dark-color-secondary-text);
+    --color-background: var(--dark-color-background);
+    --color-link: var(--dark-color-link);
+    --color-link-hover: var(--dark-color-link-hover);
+    --color-button-bg: var(--dark-color-button-bg);
+    --color-button-text: var(--dark-color-button-text);
+    --color-button-hover: var(--dark-color-button-hover);
+    --color-icon-primary: var(--dark-color-icon-primary);
+    --color-icon-secondary: var(--dark-color-icon-secondary);
+    --border-light: var(--dark-border-light);
+  }
+}

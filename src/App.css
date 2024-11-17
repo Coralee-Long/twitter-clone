@@ -1,0 +1,6 @@
+/* Main content styles */
+.main-container {
+  flex: 1 1 auto; /* Take up remaining space */
+  overflow-y: auto; /* Scroll if content overflows */
+  padding: 0;
+}
